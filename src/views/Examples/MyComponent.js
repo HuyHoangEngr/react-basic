@@ -1,9 +1,11 @@
 import React from 'react';
 
 class MyComponent extends React.Component {
+
+
     //key:value
     state = {
-        name: 'Peter Huy',
+        name: '',
         channel: 'Huy Hoang Gia',
     }
 
@@ -14,18 +16,23 @@ class MyComponent extends React.Component {
 
 
     handleOnChangeName = (event) => {
+
+        // this.state.name = event.target.value;  //bad code
+        //merge
         this.setState({
             name: event.target.value
         })
     }
 
     handleClickButton = () => {
-        console.log('hit the button')
         alert('click me')
     }
+
+    //re-render
     render() {
+        console.log('>>> call render: ', this.state)
         return (
-            <React.Fragment>
+            <>
                 <div className="first">
                     <input value={this.state.name} type="text"
                         onChange={(event) => this.handleOnChangeName(event)}
@@ -36,14 +43,11 @@ class MyComponent extends React.Component {
                     My youtube channel : {this.state.channel}
                 </div>
                 <div className="third">
-                    <button
-                        onClick={() => this.handleClickButton()}
-                    >
-                        Click me
-                    </button>
+                    <button onClick={() => this.handleClickButton()}>Click me</button>
                 </div>
-            </React.Fragment>
+            </>
         )
+
     }
 }
 
