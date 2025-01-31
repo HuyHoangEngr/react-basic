@@ -7,7 +7,12 @@ class MyComponent extends React.Component {
     //key:value
     state = {
         firstName: '',
-        lastName: ''
+        lastName: '',
+        arrJobs: [
+            { id: 'abcJob1', title: 'Developers', salary: '500 $' },
+            { id: 'abcJob2', title: 'Testers', salary: '400 $' },
+            { id: 'abcJob3', title: 'Project managers', salary: '1000 $' }
+        ]
     }
 
     /* 
@@ -35,14 +40,14 @@ class MyComponent extends React.Component {
         return (
             <>
                 <form>
-                    <label htmlFor="fname">First name:</label><br />
+                    <label HtmlFor="fname">First name:</label><br />
                     <input
                         type="text"
                         value={this.state.firstName}
                         onChange={(event) => this.handleChangeFirstName(event)}
                     />
                     <br />
-                    <label htmlFor="lname">Last name:</label><br />
+                    <label HtmlFor="lname">Last name:</label><br />
                     <input
                         type="text"
                         value={this.state.lastName}
@@ -55,9 +60,10 @@ class MyComponent extends React.Component {
                 </form>
 
                 <ChildComponent
-                    name={'Huy'}
+                    name={this.state.firstName}
                     age={'30'}
-
+                    address={'Dong Nai'}
+                    arrJobs={this.state.arrJobs}
                 />
             </>
         )
