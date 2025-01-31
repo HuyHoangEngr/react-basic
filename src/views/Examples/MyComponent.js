@@ -9,9 +9,9 @@ class MyComponent extends React.Component {
         firstName: '',
         lastName: '',
         arrJobs: [
-            { id: 'abcJob1', title: 'Developers', salary: '500 $' },
-            { id: 'abcJob2', title: 'Testers', salary: '400 $' },
-            { id: 'abcJob3', title: 'Project managers', salary: '1000 $' }
+            { id: 'abcJob1', title: 'Developers', salary: '500' },
+            { id: 'abcJob2', title: 'Testers', salary: '400' },
+            { id: 'abcJob3', title: 'Project managers', salary: '1000' }
         ]
     }
 
@@ -40,14 +40,14 @@ class MyComponent extends React.Component {
         return (
             <>
                 <form>
-                    <label HtmlFor="fname">First name:</label><br />
+                    <label htmlFor="fname">First name:</label><br />
                     <input
                         type="text"
                         value={this.state.firstName}
                         onChange={(event) => this.handleChangeFirstName(event)}
                     />
                     <br />
-                    <label HtmlFor="lname">Last name:</label><br />
+                    <label htmlFor="lname">Last name:</label><br />
                     <input
                         type="text"
                         value={this.state.lastName}
@@ -65,6 +65,8 @@ class MyComponent extends React.Component {
                     address={'Dong Nai'}
                     arrJobs={this.state.arrJobs}
                 />
+
+
             </>
         )
 
