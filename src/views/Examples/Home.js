@@ -15,7 +15,7 @@ class Home extends React.Component {
         console.log('>>> check props: ', this.props)
         return (
             <div>
-                Hello world from Homepage with Eric & Hoi Dan IT
+                Hello world from Homepage
             </div>
         )
     }
