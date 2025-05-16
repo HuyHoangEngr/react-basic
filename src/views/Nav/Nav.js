@@ -1,8 +1,6 @@
-import React from 'react';
-import './Nav.scss';
-import {
-    Link, NavLink
-} from "react-router-dom";
+import React from "react";
+import "./Nav.scss";
+import { Link, NavLink } from "react-router-dom";
 
 class Nav extends React.Component {
     render() {
@@ -17,12 +15,11 @@ class Nav extends React.Component {
                 <NavLink to="/about" activeClassName="active">
                     About
                 </NavLink>
-                <NavLink to="/user" activeClassName="active">
+                {/* <NavLink to="/user" activeClassName="active">
                     Users
-                </NavLink>
-
+                </NavLink> */}
             </div>
-        )
+        );
     }
 }
 export default Nav;
